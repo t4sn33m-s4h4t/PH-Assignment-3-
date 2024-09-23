@@ -45,13 +45,13 @@ btns.forEach(btn => {
 // Donation Function 
 
 function DonateNow(e) {
-    let amount = parseFloat(e.target.previousElementSibling.value);
+    let amount = e.target.previousElementSibling.value.trim();
     let currentBalance = parseFloat(document.getElementById("current-balance").innerText);
     
-    if (amount > 0 && amount <= currentBalance && amount.toString().length === e.target.previousElementSibling.value.length) {
-        updateBalanceAndDonation(e, amount);
+    if (!isNaN(amount) && amount>0 && amount<=currentBalance) {
+        updateBalanceAndDonation(e, parseFloat(amount));
         openModal();
-        updateHistory(e, amount);
+        updateHistory(e, parseFloat(amount));
     } else {
         alert("Invalid Donation Amount");
     }
