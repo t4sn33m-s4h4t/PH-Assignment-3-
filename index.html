@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <!-- Tailwind & daisyui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <!-- Custom CSS  -->
+    <style>
+        body {
+            font-family: "Lexend", sans-serif;
+        }
+
+        .background-color {
+            background-color: #ffedc959;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <!-- Navbar Starts  -->
+    <section class="backdrop-blur-lg navbar-section sticky z-10 top-0 transition-all duration-200 ease-in-out">
+        <div class="background-color ">
+            <navbar class="navbar justify-between  lg:px-32 py-4  md:px-20 pb-6">
+            <div class="navbar-start">
+                <a href="./blog/index.html" class="btn bg-lime-300 px-6 py-2 text-lg rounded-lg font-bold">
+                    Blog
+                </a>
+            </div>
+            <div class="navbar-center space-x-5 flex">
+                <div class="logo">
+                    <img src="./assets/logo.png" alt="">
+                </div>
+                <div class="font-extrabold hidden lg:block text-xl">
+                    Donate Bangladesh
+                </div>
+            </div>
+            <div class="navbar-end text-gray-600 font-semibold text-xl  flex gap-2 ">
+                <img src="./assets/coin.png" alt="">
+                <p id="current-balance">5500</p>
+                <p class="font-bold">BDT</p>
+            </div>
+            </navbar>
+        </div>
+        <!-- Blog Btns  -->
+        <div class=" pt-7 pb-5 text-lg text-center space-x-3">
+            <button id="don-btn"
+                class="border-transparent menu-btns bg-lime-300 border-2 px-8 py-2  rounded-lg font-bold">
+                Donation
+            </button>
+            <button id="his-btn" class=" menu-btns text-gray-600 border-2  px-8 py-2 rounded-lg font-bold">
+                History
+            </button>
+        </div>
+        <!-- Blog Btns  -->
+    </section>
+    <!-- Navbar Ends  -->
+    <!-- Blog Section Starts  -->
+    <!-- Main Blogs -->
+    <main class="lg:max-w-6xl md:max-w-2xl max-w-96 mx-auto min-h-40">
+        <!-- Donation section  -->
+        <div id="blog-container" class="mx-auto">
+
+        </div>
+        <!-- History Section  -->
+        <div id="history-container" class="mx-auto hidden history container">
+            <p id="default-history" class="text-red-400 text-center">No History Found!</p>
+        </div>
+    </main>
+    <!-- Main Blogs -->
+    <!-- Blog Section Ends  -->
+
+    <!-- Modal Starts  -->
+    <div class="flex justify-center items-center">
+
+        <input type="checkbox" id="modal" class="modal-toggle" />
+        <div class="modal">
+            <div class="modal-box relative text-center max-w-md">
+
+                <h3 class="text-3xl font-extrabold">Congrats!</h3>
+                <div class="flex justify-center my-4">
+                    <span class="text-yellow-500 text-5xl"><img src="./assets/coin.png" alt=""></span>
+                </div>
+
+                <p class="text-lg">You Have Donated for Humankind</p>
+                <p class="text-xl font-bold text-lime-600">Successfully</p>
+
+                <div class="mt-6">
+                    <label for="modal" class="btn">
+                        Close Confirmation
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Ends  -->
+
+    <footer class="mt-16 background-color h-28">
+
+    </footer>
+    <script src="./Js/bloginfo.js"></script>
+    <script src="./Js/script.js"></script>
+</body>
+
+</html>
+

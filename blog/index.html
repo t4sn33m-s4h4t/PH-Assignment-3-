@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog || Donate Bangladesh</title>
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon">
+    <!-- Tailwind & daisyui  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <!-- Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <!-- Custom CSS  -->
+    <style>
+        body {
+            font-family: "Lexend", sans-serif;
+        }
+
+        .background-color {
+            background-color: #ffedc959;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <!-- Navbar Starts  -->
+    <section class="backdrop-blur-lg navbar-section sticky z-10 top-0 transition-all duration-200 ease-in-out">
+        <div class="background-color ">
+            <navbar class="navbar justify-between  lg:px-32 md:px-20 py-4 pb-6">
+                <div class="navbar-start">
+                    <a href="../index.html" class="btn bg-lime-300 px-6 py-2 text-lg rounded-lg font-bold">
+                        Home
+                    </a>
+                </div>
+                <div class="navbar-center space-x-5 flex">
+                    <div class="logo">
+                        <img src="../assets/logo.png" alt="">
+                    </div>
+                    <div class="font-extrabold hidden lg:block text-xl">
+                        Donate Bangladesh
+                    </div>
+                </div>
+                <div class="navbar-end text-gray-600 font-semibold flex gap-2 ">
+                    <img src="../assets/coin.png" alt="">
+                    <p id="current-balance">5500</p>
+                    <p class="font-bold">BDT</p>
+                </div>
+            </navbar>
+        </div>
+
+    </section>
+
+
+    <!-- BLog section starts  -->
+    <main class="w-5/6 mx-auto">
+        <div class="flex items-center gap-2">
+            <p class="text-4xl inline font-extrabold py-10 ">Important FAQ
+            </p>
+            <img class="w-10 h-10" src="../assets/chat.png" alt="">
+        </div>
+
+        <div id="FAQ-container" class="join join-vertical w-full">
+        </div>
+    </main>
+
+
+
+    <script src="../Js/bloginfo.js"></script>
+    <script>
+
+        // Show FAQs 
+        const FAQsContainer = document.querySelector("#FAQ-container");
+        FAQs.map(f => {
+            const FAQ = addtoWebpage(f, "FAQ")
+            FAQsContainer.innerHTML += FAQ;
+        })
+    </script>
+
+    <footer class="mt-16 background-color h-28">
+
+    </footer>
+</body>
+
+</html>
